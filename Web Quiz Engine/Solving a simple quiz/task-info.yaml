@@ -135,6 +135,12 @@ files:
 - name: src/engine/Result.java
   visible: true
   learner_created: true
+- name: src/engine/BotController.java
+  visible: true
+  learner_created: true
+- name: src/engine/UserInfo.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/504/implement#comment
 status: Solved
 feedback:
