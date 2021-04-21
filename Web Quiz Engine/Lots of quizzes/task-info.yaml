@@ -241,6 +241,126 @@ files:
         }
     }
   learner_created: false
+- name: src/engine/Result.java
+  visible: true
+  text: |
+    package engine;
+
+    public class Result {
+        private boolean success;
+        private String feedback;
+
+        public Result() {}
+        public Result(boolean success, String feedback) {
+            this.success = success;
+            this.feedback = feedback;
+        }
+
+        public boolean isSuccess() {
+            return success;
+        }
+
+        public void setSuccess(boolean success) {
+            this.success = success;
+        }
+
+        public String getFeedback() {
+            return feedback;
+        }
+
+        public void setFeedback(String feedback) {
+            this.feedback = feedback;
+        }
+    }
+  learner_created: true
+- name: src/engine/QuizModel.java
+  visible: true
+  learner_created: true
+- name: src/engine/Quiz.java
+  visible: true
+  text: |
+    package engine;
+
+    public class Test {
+        private String title;
+        private String text;
+        private String[] options;
+
+        public Test(){}
+
+        public Test(String title, String text, String[] options) {
+            this.title = title;
+            this.text = text;
+            this.options = options.clone();
+        }
+
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+
+        public String[] getOptions() {
+            return options;
+        }
+
+        public void setOptions(String[] options) {
+            this.options = options;
+        }
+    }
+  learner_created: true
+- name: src/engine/QuizController.java
+  visible: true
+  text: |
+    package engine;
+
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.PostMapping;
+    import org.springframework.web.bind.annotation.RequestParam;
+    import org.springframework.web.bind.annotation.RestController;
+
+    @RestController
+    public class TestController {
+        public TestController(){}
+
+        @GetMapping(path = "/api/quiz")
+        public Test sendTest() {
+            return new Test(
+                    "The Java Logo",
+                    "What is depicted on the Java logo?",
+                    new String[]{"Robot","Tea leaf","Cup of coffee","Bug"}
+                    );
+        }
+
+        @PostMapping(path = "/api/quiz")
+        public Result sendResult(@RequestParam int answer) {
+            if (answer == 2) {
+                return new Result(true, "Congratulations, you're right!");
+            }
+            return new Result(false, "Wrong answer! Please, try again.");
+        }
+    }
+  learner_created: true
+- name: src/engine/BotController.java
+  visible: true
+  learner_created: true
+- name: src/engine/UserInfo.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/505/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Wed, 21 Apr 2021 19:54:15 UTC
 record: -1
