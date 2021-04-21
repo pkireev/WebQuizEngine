@@ -18,7 +18,6 @@ public class QuizController {
     public Result solve(@PathVariable int id, @RequestParam int answer) {
 
         Quiz quiz = quizModel.getQuiz(id);
-        System.out.println(quiz);
 
         if (quiz == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found");
