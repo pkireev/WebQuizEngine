@@ -4,7 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 public class QuizController {
@@ -15,14 +17,14 @@ public class QuizController {
     }
 
     @PostMapping(path = "/api/quizzes/{id}/solve")
-    public Result solve(@PathVariable int id, @RequestParam int answer) {
+    public Result solve(@PathVariable int id, @RequestBody QuizAnswers answers) {
 
         Quiz quiz = quizModel.getQuiz(id);
 
         if (quiz == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found");
         } else {
-            if (answer == quiz.getAnswer()) {
+            if (Arrays.equals(answers.getAnswers(), quiz.getAnswers())) {
                 return new Result(true, "Congratulations, you're right!");
             } else {
                 return new Result(false, "Wrong answer! Please, try again.");

@@ -8,16 +8,16 @@ public class Quiz {
     private String title;
     private String text;
     private String[] options;
-    private int answer;
+    private int[] answers;
 
     public Quiz(){}
 
-    public Quiz(int id, String title, String text, String[] options, int answer) {
+    public Quiz(int id, String title, String text, String[] options, int[] answers) {
         this.id = id;
         this.title = title;
         this.text = text;
         this.options = options.clone();
-        this.answer = answer;
+        this.answers = answers.clone();
     }
 
     public void setId(int id) { this.id = id; }
@@ -49,13 +49,13 @@ public class Quiz {
     }
 
     @JsonIgnore
-    public int getAnswer() { return answer; }
+    public int[] getAnswers() { return answers; }
 
-    @JsonProperty("answer")
-    public void setAnswer(int answer) { this.answer = answer; }
+    @JsonProperty
+    public void setAnswers(int[] answers) { this.answers = answers.clone(); }
 
     @Override
     public String toString() {
-        return String.format("id: %d\ntitle: %s\nanswer: %d\n", id, title, answer);
+        return String.format("id: %d\ntitle: %s\nanswer: %d\n", id, title, answers);
     }
 }
