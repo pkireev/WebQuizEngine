@@ -440,37 +440,6 @@ files:
         }
     }
   learner_created: false
-- name: src/engine/BotController.java
-  visible: true
-  text: |
-    package engine;
-
-    import org.springframework.web.bind.annotation.PostMapping;
-    import org.springframework.web.bind.annotation.RequestBody;
-    import org.springframework.web.bind.annotation.RestController;
-
-    import java.util.List;
-
-    @RestController
-    public class BotController {
-        public BotController() {}
-
-        @PostMapping(path = "/greet", consumes = "application/json")
-        public String getUserInfo(@RequestBody UserInfo userinfo) {
-            if (userinfo.isEnabled()) {
-                return String.format("Hello! Nice to see you, %s!", userinfo.getName());
-            } else {
-                return String.format("Hello! Nice to see you, %s! Your account is disabled :(", userinfo.getName());
-            }
-        }
-
-        @PostMapping(path = "/logout", consumes = "application/json")
-        public String logoutUsersInArray(@RequestBody List<UserInfo> users) {
-            // logging out users
-            return String.format("Total %d users have been logged out", users.size());
-        }
-    }
-  learner_created: true
 - name: src/engine/Result.java
   visible: true
   text: |
@@ -662,55 +631,12 @@ files:
         }
     }
   learner_created: true
-- name: src/engine/UserInfo.java
-  visible: true
-  text: |
-    package engine;
-
-    public class UserInfo {
-        private int id;
-        private String name;
-        private String phone;
-        private boolean enabled;
-
-        public UserInfo() {}
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getPhone() {
-            return phone;
-        }
-
-        public void setPhone(String phone) {
-            this.phone = phone;
-        }
-
-        public boolean isEnabled() {
-            return enabled;
-        }
-
-        public void setEnabled(boolean enabled) {
-            this.enabled = enabled;
-        }
-    }
-  learner_created: true
 - name: src/engine/QuizAnswers.java
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/506/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 29 Apr 2021 13:13:41 UTC
 record: -1

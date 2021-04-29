@@ -1,20 +1,33 @@
 package engine;
 
 public class QuizAnswers {
-    private int[] answers;
+    private Integer[] answer;
 
-    public QuizAnswers() {
+    public QuizAnswers() {}
+    public QuizAnswers(Integer[] answers) {
+        setAnswer(answers);
     }
 
-    public QuizAnswers(int[] answers) {
-        setAnswers(answers);
+    public Integer[] getAnswer() {
+        return answer;
+    }
+    public void setAnswer(Integer[] answer) {
+        this.answer = answer;
     }
 
-    public int[] getAnswers() {
-        return answers;
-    }
-    public void setAnswers(int[] answers) {
-        this.answers = answers;
+    @Override
+    public String toString() {
+        if (answer == null) {
+            return "answer = null";
+        }
+
+        StringBuilder result = new StringBuilder();
+        result.append("answer = [");
+        for (int i = 0; i < answer.length; i++) {
+            result.append(answer[i] + " ");
+        }
+        result.append("]");
+        return result.toString();
     }
 
 }

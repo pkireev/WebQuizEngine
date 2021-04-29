@@ -6,5 +6,7 @@ engine/QuizController.java
  engine.QuizController
 engine/QuizModel.java
  engine.QuizModel
+engine/QuizAnswers.java
+ engine.QuizAnswers
 engine/Quiz.java
  engine.Quiz

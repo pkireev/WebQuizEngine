@@ -27,4 +27,9 @@ public class QuizModel {
     public List<Quiz> getAllQuizzes() {
         return quizzes;
     }
+
+    public void clear() {
+        quizzes.clear();
+        id = 0;
+    }
 }

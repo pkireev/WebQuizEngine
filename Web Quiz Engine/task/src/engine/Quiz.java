@@ -1,23 +1,35 @@
 package engine;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.Arrays;
 
+@JsonIgnoreProperties(value={ "answer" }, allowSetters = true)
 public class Quiz {
     private int id;
+
+    @NotEmpty(message = "Title can't be empty")
     private String title;
+
+    @NotEmpty(message = "Text can't be empty")
     private String text;
+
+    @NotNull
+    @Size(min = 2, message = "The quiz must contain two or more options")
     private String[] options;
-    private int[] answers;
+
+    private Integer[] answer;
 
     public Quiz(){}
 
-    public Quiz(int id, String title, String text, String[] options, int[] answers) {
+    public Quiz(int id, String title, String text, String[] options, Integer[] answer) {
         this.id = id;
         this.title = title;
         this.text = text;
         this.options = options.clone();
-        this.answers = answers.clone();
+        this.answer = answer;
     }
 
     public void setId(int id) { this.id = id; }
@@ -48,14 +60,26 @@ public class Quiz {
         this.options = options;
     }
 
-    @JsonIgnore
-    public int[] getAnswers() { return answers; }
+    public Integer[] getAnswer() { return answer; }
 
-    @JsonProperty
-    public void setAnswers(int[] answers) { this.answers = answers.clone(); }
+    public void setAnswer(Integer[] answer) { this.answer = answer.clone(); }
 
     @Override
     public String toString() {
-        return String.format("id: %d\ntitle: %s\nanswer: %d\n", id, title, answers);
+        String result = String.format("id: %d\ntitle: %s\nanswers:[", id, title);
+        for (int i = 0; i < answer.length; i++) {
+            result += answer[i] + " ";
+        }
+        result += "]\n";
+
+        return result;
+    }
+
+    public void fixAnswers() {
+        if (answer == null) {
+            answer = new Integer[0];
+        } else {
+            Arrays.sort(answer);
+        }
     }
 }

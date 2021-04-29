@@ -4,9 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 @RestController
 public class QuizController {
@@ -17,26 +17,36 @@ public class QuizController {
     }
 
     @PostMapping(path = "/api/quizzes/{id}/solve")
-    public Result solve(@PathVariable int id, @RequestBody QuizAnswers answers) {
+    public Result solve(@PathVariable int id, @RequestBody QuizAnswers answer) {
+        boolean isCorrect = false;
 
-        Quiz quiz = quizModel.getQuiz(id);
+        if (answer.getAnswer() != null) {
+            Quiz quiz = quizModel.getQuiz(id);
 
-        if (quiz == null) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found");
-        } else {
-            if (Arrays.equals(answers.getAnswers(), quiz.getAnswers())) {
-                return new Result(true, "Congratulations, you're right!");
+            if (quiz == null) {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found");
             } else {
-                return new Result(false, "Wrong answer! Please, try again.");
+                isCorrect = Arrays.equals(answer.getAnswer(), quiz.getAnswer());
             }
+        }
+
+        if (isCorrect) {
+            return new Result(true, "Congratulations, you're right!");
+        } else {
+            return new Result(false, "Wrong answer! Please, try again.");
         }
     }
 
     @PostMapping(path = "/api/quizzes")
-    public Quiz createQuiz(@RequestBody Quiz newQuiz) {
+    public Quiz createQuiz(@Valid @RequestBody Quiz newQuiz) {
+
         int id = quizModel.getId();
+
         newQuiz.setId(id);
+        newQuiz.fixAnswers();
+
         quizModel.storeQuiz(newQuiz);
+        System.out.println(newQuiz);
 
         return newQuiz;
     }
