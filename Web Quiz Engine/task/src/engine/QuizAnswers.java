@@ -29,5 +29,4 @@ public class QuizAnswers {
         result.append("]");
         return result.toString();
     }
-
 }

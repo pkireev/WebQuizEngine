@@ -1,13 +1,18 @@
 package engine;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Arrays;
 
+@Entity
+@Table(name = "quizzes")
 @JsonIgnoreProperties(value={ "answer" }, allowSetters = true)
 public class Quiz {
+
     private int id;
 
     @NotEmpty(message = "Title can't be empty")
@@ -32,9 +37,11 @@ public class Quiz {
         this.answer = answer;
     }
 
-    public void setId(int id) { this.id = id; }
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getTitle() {
         return title;
