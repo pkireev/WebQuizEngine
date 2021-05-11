@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.WebQuizEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-29T13:13:28" hostname="MacBook-Air-Petr.local" time="12.396">
+<testsuite name="tests.WebQuizEngineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-11T09:52:24" hostname="Air-Petr" time="41.944">
   <properties/>
-  <testcase name="start" classname="tests.WebQuizEngineTest" time="12.396"/>
-  <system-out><![CDATA[?[1;31m
-Start test 1?[0m
+  <testcase name="start" classname="tests.WebQuizEngineTest" time="41.944">
+    <failure message="java.lang.AssertionError: Unexpected error in test #42&#10;&#10;We have recorded this bug and will fix it soon.&#10;&#10;Submitted via IDE&#10;&#10;OS Mac OS X&#10;Java 11.0.9.1&#10;Vendor JetBrains s.r.o.&#10;Testing library version 8&#10;&#10;org.hyperskill.hstest.exception.outcomes.UnexpectedError: Cannot stop Spring application, port 8889 is not freed after POST &quot;/actuator/shutdown&quot;&#10;&#9;at org.hyperskill.hstest.stage.SpringTest.stopSpring(SpringTest.java:165)&#10;&#9;at org.hyperskill.hstest.stage.SpringTest.reloadSpring(SpringTest.java:172)&#10;&#9;at tests.WebQuizEngineTest.reloadServer(WebQuizEngineTest.java:600)&#10;&#9;at tests.WebQuizEngineTest.lambda$new$41(WebQuizEngineTest.java:262)&#10;&#9;at org.hyperskill.hstest.dynamic.input.DynamicTesting.lambda$null$2(DynamicTesting.java:281)&#10;&#9;at org.hyperskill.hstest.dynamic.input.DynamicTesting$1DynamicTestElement.lambda$null$0(DynamicTesting.java:244)&#10;&#9;at org.hyperskill.hstest.testing.runner.SpringApplicationRunner.test(SpringApplicationRunner.java:43)&#10;&#9;at org.hyperskill.hstest.testing.TestRun.test(TestRun.java:87)&#10;&#9;at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:115)&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;&#9;at java.base/java.lang.reflect.Method.invoke(Method.java:566)&#10;&#9;at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#10;&#9;at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#10;&#9;at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#10;&#9;at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#10;&#9;at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)&#10;&#9;at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#10;&#9;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#10;&#9;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#10;&#9;at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)&#10;&#9;at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)&#10;&#9;at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)&#10;&#9;at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)&#10;&#9;at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;&#9;at java.base/java.lang.reflect.Method.invoke(Method.java:566)&#10;&#9;at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)&#10;&#9;at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)&#10;&#9;at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)&#10;&#9;at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)&#10;&#9;at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)&#10;&#9;at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;&#9;at java.base/java.lang.reflect.Method.invoke(Method.java:566)&#10;&#9;at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)&#10;&#9;at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)&#10;&#9;at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)&#10;&#9;at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)&#10;&#9;at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)&#10;&#9;at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)&#10;&#9;at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)&#10;&#9;at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)&#10;&#9;at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)&#10;&#9;at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)&#10;&#9;at java.base/java.lang.Thread.run(Thread.java:834)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Pause...&#10;&#10;  .   ____          _            __ _ _&#10; /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \&#10;( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \&#10; \\/  ___)| |_)| | | | | || (_| |  ) ) ) )&#10;  '  |____| .__|_| |_|_| |_\__, | / / / /&#10; =========|_|==============|___/=/_/_/_/&#10; :: Spring Boot ::        (v2.2.2.RELEASE)&#10;&#10;2021-05-11 12:52:27.199  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine on Air-Petr with PID 591 (started by petrkireev in /Users/petrkireev/IdeaProjects/Web Quiz Engine/Web Quiz Engine/task)&#10;2021-05-11 12:52:27.205  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default&#10;2021-05-11 12:52:29.734  INFO 591 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.&#10;2021-05-11 12:52:29.880  INFO 591 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 3 JPA repository interfaces.&#10;2021-05-11 12:52:30.764  INFO 591 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)&#10;2021-05-11 12:52:31.385  INFO 591 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)&#10;2021-05-11 12:52:31.411  INFO 591 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]&#10;2021-05-11 12:52:31.412  INFO 591 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]&#10;2021-05-11 12:52:31.651  INFO 591 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext&#10;2021-05-11 12:52:31.652  INFO 591 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4291 ms&#10;2021-05-11 12:52:31.933  INFO 591 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...&#10;2021-05-11 12:52:32.465  INFO 591 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.&#10;2021-05-11 12:52:32.481  INFO 591 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'&#10;2021-05-11 12:52:33.012  INFO 591 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]&#10;2021-05-11 12:52:33.247  INFO 591 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}&#10;2021-05-11 12:52:33.844  INFO 591 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}&#10;2021-05-11 12:52:34.190  INFO 591 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect&#10;Hibernate: create table quizzes (id integer not null, answer binary(255), creator varchar(255), options binary(255) not null, text varchar(255), title varchar(255), primary key (id))&#10;Hibernate: create table roles (id integer not null, name varchar(255), primary key (id))&#10;Hibernate: create table users (id integer not null, email varchar(255), password varchar(255) not null, primary key (id))&#10;Hibernate: create table users_roles (user_id integer not null, roles_id integer not null, primary key (user_id, roles_id))&#10;Hibernate: create sequence hibernate_sequence start with 1 increment by 1&#10;Hibernate: alter table users_roles add constraint FKa62j07k5mhgifpp955h37ponj foreign key (roles_id) references roles&#10;Hibernate: alter table users_roles add constraint FK2o0jvgh89lemvvo17cbqvdxaa foreign key (user_id) references users&#10;2021-05-11 12:52:36.172  INFO 591 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]&#10;2021-05-11 12:52:36.190  INFO 591 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'&#10;2021-05-11 12:52:36.992  WARN 591 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning&#10;2021-05-11 12:52:37.483  INFO 591 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10728d2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@22299e5c, org.springframework.security.web.header.HeaderWriterFilter@44fae88d, org.springframework.security.web.authentication.logout.LogoutFilter@62ac986e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c7775a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@291f8665, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3712c2b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ee7249d, org.springframework.security.web.access.ExceptionTranslationFilter@4443e01e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26c8e2c7]&#10;2021-05-11 12:52:37.724  INFO 591 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'&#10;2021-05-11 12:52:38.281  INFO 591 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'&#10;2021-05-11 12:52:38.395  INFO 591 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''&#10;2021-05-11 12:52:38.402  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 12.156 seconds (JVM running for 14.712)&#10;2021-05-11 12:52:39.186  INFO 591 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'&#10;2021-05-11 12:52:39.188  INFO 591 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'&#10;2021-05-11 12:52:39.208  INFO 591 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: call next value for hibernate_sequence&#10;Hibernate: insert into roles (name, id) values (?, ?)&#10;Hibernate: call next value for hibernate_sequence&#10;Hibernate: insert into users (email, password, id) values (?, ?, ?)&#10;Hibernate: insert into users_roles (user_id, roles_id) values (?, ?)&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: call next value for hibernate_sequence&#10;Hibernate: insert into roles (name, id) values (?, ?)&#10;Hibernate: call next value for hibernate_sequence&#10;Hibernate: insert into users (email, password, id) values (?, ?, ?)&#10;Hibernate: insert into users_roles (user_id, roles_id) values (?, ?)&#10;2021-05-11 12:52:40.413  WARN 591 --- [nio-8889-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'email': rejected value [google.com]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5f5d3394,\w+@\w+\.\w+]; default message [must match &quot;\w+@\w+\.\w+&quot;]] ]&#10;2021-05-11 12:52:40.522  WARN 591 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'email': rejected value [well@googlecom]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5f5d3394,\w+@\w+\.\w+]; default message [must match &quot;\w+@\w+\.\w+&quot;]] ]&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;2021-05-11 12:52:40.583  WARN 591 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'password': rejected value [1234]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]&#10;2021-05-11 12:52:40.597  WARN 591 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'password': rejected value [123]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: call next value for hibernate_sequence&#10;Hibernate: insert into quizzes (answer, creator, options, text, title, id) values (?, ?, ?, ?, ?, ?)&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: call next value for hibernate_sequence&#10;Hibernate: insert into quizzes (answer, creator, options, text, title, id) values (?, ?, ?, ?, ?, ?)&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_&#10;Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?&#10;Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?&#10;Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_&#10;2021-05-11 12:52:44.696  INFO 591 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'&#10;Pause...&#10;2021-05-11 12:52:45.703  INFO 591 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'&#10;2021-05-11 12:52:45.708  INFO 591 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...&#10;2021-05-11 12:52:45.946  INFO 591 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed." type="java.lang.AssertionError">java.lang.AssertionError: Unexpected error in test #42
+
+We have recorded this bug and will fix it soon.
+
+Submitted via IDE
+
+OS Mac OS X
+Java 11.0.9.1
+Vendor JetBrains s.r.o.
+Testing library version 8
+
+org.hyperskill.hstest.exception.outcomes.UnexpectedError: Cannot stop Spring application, port 8889 is not freed after POST &quot;/actuator/shutdown&quot;
+	at org.hyperskill.hstest.stage.SpringTest.stopSpring(SpringTest.java:165)
+	at org.hyperskill.hstest.stage.SpringTest.reloadSpring(SpringTest.java:172)
+	at tests.WebQuizEngineTest.reloadServer(WebQuizEngineTest.java:600)
+	at tests.WebQuizEngineTest.lambda$new$41(WebQuizEngineTest.java:262)
+	at org.hyperskill.hstest.dynamic.input.DynamicTesting.lambda$null$2(DynamicTesting.java:281)
+	at org.hyperskill.hstest.dynamic.input.DynamicTesting$1DynamicTestElement.lambda$null$0(DynamicTesting.java:244)
+	at org.hyperskill.hstest.testing.runner.SpringApplicationRunner.test(SpringApplicationRunner.java:43)
+	at org.hyperskill.hstest.testing.TestRun.test(TestRun.java:87)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+Please find below the output of your program during this failed test.
+
+---
+
+Pause...
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,287 +86,406 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.2.RELEASE)
 
-2021-04-29 16:13:34.850  INFO 6717 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine on MacBook-Air-Petr.local with PID 6717 (started by petrkireev in /Users/petrkireev/IdeaProjects/Web Quiz Engine/Web Quiz Engine/task)
-2021-04-29 16:13:34.855  INFO 6717 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
-2021-04-29 16:13:37.297  INFO 6717 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-2021-04-29 16:13:37.321  INFO 6717 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-29 16:13:37.322  INFO 6717 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2021-04-29 16:13:37.503  INFO 6717 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-29 16:13:37.504  INFO 6717 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2562 ms
-2021-04-29 16:13:38.105  INFO 6717 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-29 16:13:38.502  INFO 6717 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2021-04-29 16:13:38.643  INFO 6717 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-2021-04-29 16:13:38.654  INFO 6717 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 9.595 seconds (JVM running for 11.004)
-2021-04-29 16:13:39.362  INFO 6717 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-29 16:13:39.364  INFO 6717 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-29 16:13:39.379  INFO 6717 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2021-05-11 12:52:27.199  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine on Air-Petr with PID 591 (started by petrkireev in /Users/petrkireev/IdeaProjects/Web Quiz Engine/Web Quiz Engine/task)
+2021-05-11 12:52:27.205  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+2021-05-11 12:52:29.734  INFO 591 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-11 12:52:29.880  INFO 591 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 3 JPA repository interfaces.
+2021-05-11 12:52:30.764  INFO 591 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-11 12:52:31.385  INFO 591 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2021-05-11 12:52:31.411  INFO 591 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-11 12:52:31.412  INFO 591 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-05-11 12:52:31.651  INFO 591 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-11 12:52:31.652  INFO 591 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4291 ms
+2021-05-11 12:52:31.933  INFO 591 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 12:52:32.465  INFO 591 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 12:52:32.481  INFO 591 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+2021-05-11 12:52:33.012  INFO 591 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 12:52:33.247  INFO 591 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-05-11 12:52:33.844  INFO 591 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 12:52:34.190  INFO 591 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: create table quizzes (id integer not null, answer binary(255), creator varchar(255), options binary(255) not null, text varchar(255), title varchar(255), primary key (id))
+Hibernate: create table roles (id integer not null, name varchar(255), primary key (id))
+Hibernate: create table users (id integer not null, email varchar(255), password varchar(255) not null, primary key (id))
+Hibernate: create table users_roles (user_id integer not null, roles_id integer not null, primary key (user_id, roles_id))
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: alter table users_roles add constraint FKa62j07k5mhgifpp955h37ponj foreign key (roles_id) references roles
+Hibernate: alter table users_roles add constraint FK2o0jvgh89lemvvo17cbqvdxaa foreign key (user_id) references users
+2021-05-11 12:52:36.172  INFO 591 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 12:52:36.190  INFO 591 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 12:52:36.992  WARN 591 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 12:52:37.483  INFO 591 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10728d2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@22299e5c, org.springframework.security.web.header.HeaderWriterFilter@44fae88d, org.springframework.security.web.authentication.logout.LogoutFilter@62ac986e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c7775a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@291f8665, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3712c2b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ee7249d, org.springframework.security.web.access.ExceptionTranslationFilter@4443e01e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26c8e2c7]
+2021-05-11 12:52:37.724  INFO 591 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 12:52:38.281  INFO 591 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-05-11 12:52:38.395  INFO 591 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2021-05-11 12:52:38.402  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 12.156 seconds (JVM running for 14.712)
+2021-05-11 12:52:39.186  INFO 591 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-11 12:52:39.188  INFO 591 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-11 12:52:39.208  INFO 591 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into roles (name, id) values (?, ?)
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into users (email, password, id) values (?, ?, ?)
+Hibernate: insert into users_roles (user_id, roles_id) values (?, ?)
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into roles (name, id) values (?, ?)
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into users (email, password, id) values (?, ?, ?)
+Hibernate: insert into users_roles (user_id, roles_id) values (?, ?)
+2021-05-11 12:52:40.413  WARN 591 --- [nio-8889-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'email': rejected value [google.com]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5f5d3394,\w+@\w+\.\w+]; default message [must match &quot;\w+@\w+\.\w+&quot;]] ]
+2021-05-11 12:52:40.522  WARN 591 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'email': rejected value [well@googlecom]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5f5d3394,\w+@\w+\.\w+]; default message [must match &quot;\w+@\w+\.\w+&quot;]] ]
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+2021-05-11 12:52:40.583  WARN 591 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'password': rejected value [1234]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]
+2021-05-11 12:52:40.597  WARN 591 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'password': rejected value [123]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quizzes (answer, creator, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quizzes (answer, creator, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
+2021-05-11 12:52:44.696  INFO 591 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+Pause...
+2021-05-11 12:52:45.703  INFO 591 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 12:52:45.708  INFO 591 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 12:52:45.946  INFO 591 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:136)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Pause...
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.2.RELEASE)
+
+2021-05-11 12:52:27.199  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine on Air-Petr with PID 591 (started by petrkireev in /Users/petrkireev/IdeaProjects/Web Quiz Engine/Web Quiz Engine/task)
+2021-05-11 12:52:27.205  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+2021-05-11 12:52:29.734  INFO 591 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-11 12:52:29.880  INFO 591 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 3 JPA repository interfaces.
+2021-05-11 12:52:30.764  INFO 591 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-11 12:52:31.385  INFO 591 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2021-05-11 12:52:31.411  INFO 591 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-11 12:52:31.412  INFO 591 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-05-11 12:52:31.651  INFO 591 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-11 12:52:31.652  INFO 591 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4291 ms
+2021-05-11 12:52:31.933  INFO 591 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 12:52:32.465  INFO 591 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 12:52:32.481  INFO 591 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+2021-05-11 12:52:33.012  INFO 591 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 12:52:33.247  INFO 591 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-05-11 12:52:33.844  INFO 591 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 12:52:34.190  INFO 591 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: create table quizzes (id integer not null, answer binary(255), creator varchar(255), options binary(255) not null, text varchar(255), title varchar(255), primary key (id))
+Hibernate: create table roles (id integer not null, name varchar(255), primary key (id))
+Hibernate: create table users (id integer not null, email varchar(255), password varchar(255) not null, primary key (id))
+Hibernate: create table users_roles (user_id integer not null, roles_id integer not null, primary key (user_id, roles_id))
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: alter table users_roles add constraint FKa62j07k5mhgifpp955h37ponj foreign key (roles_id) references roles
+Hibernate: alter table users_roles add constraint FK2o0jvgh89lemvvo17cbqvdxaa foreign key (user_id) references users
+2021-05-11 12:52:36.172  INFO 591 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 12:52:36.190  INFO 591 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 12:52:36.992  WARN 591 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 12:52:37.483  INFO 591 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10728d2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@22299e5c, org.springframework.security.web.header.HeaderWriterFilter@44fae88d, org.springframework.security.web.authentication.logout.LogoutFilter@62ac986e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c7775a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@291f8665, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3712c2b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ee7249d, org.springframework.security.web.access.ExceptionTranslationFilter@4443e01e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26c8e2c7]
+2021-05-11 12:52:37.724  INFO 591 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 12:52:38.281  INFO 591 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-05-11 12:52:38.395  INFO 591 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2021-05-11 12:52:38.402  INFO 591 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 12.156 seconds (JVM running for 14.712)
+2021-05-11 12:52:39.186  INFO 591 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-11 12:52:39.188  INFO 591 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-11 12:52:39.208  INFO 591 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into roles (name, id) values (?, ?)
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into users (email, password, id) values (?, ?, ?)
+Hibernate: insert into users_roles (user_id, roles_id) values (?, ?)
 ?[1;31m
 Start test 2?[0m
-id: 0
-title: The Java Logo
-answers:[2 ]
-
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into roles (name, id) values (?, ?)
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into users (email, password, id) values (?, ?, ?)
+Hibernate: insert into users_roles (user_id, roles_id) values (?, ?)
 ?[1;31m
 Start test 3?[0m
+2021-05-11 12:52:40.413  WARN 591 --- [nio-8889-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'email': rejected value [google.com]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5f5d3394,\w+@\w+\.\w+]; default message [must match "\w+@\w+\.\w+"]] ]
 ?[1;31m
 Start test 4?[0m
+2021-05-11 12:52:40.522  WARN 591 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'email': rejected value [well@googlecom]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@5f5d3394,\w+@\w+\.\w+]; default message [must match "\w+@\w+\.\w+"]] ]
 ?[1;31m
 Start test 5?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
 ?[1;31m
 Start test 6?[0m
-id: 1
-title: The Ultimate Question
-answers:[1 ]
-
+2021-05-11 12:52:40.583  WARN 591 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'password': rejected value [1234]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]
 ?[1;31m
 Start test 7?[0m
+2021-05-11 12:52:40.597  WARN 591 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.QuizController.createUser(engine.User): [Field error in object 'user' on field 'password': rejected value [123]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]
 ?[1;31m
 Start test 8?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
 ?[1;31m
 Start test 9?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
 ?[1;31m
 Start test 10?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quizzes (answer, creator, options, text, title, id) values (?, ?, ?, ?, ?, ?)
 ?[1;31m
 Start test 11?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 12?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 13?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
 ?[1;31m
 Start test 14?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into quizzes (answer, creator, options, text, title, id) values (?, ?, ?, ?, ?, ?)
 ?[1;31m
 Start test 15?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 16?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 17?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
 ?[1;31m
 Start test 18?[0m
-2021-04-29 16:13:40.046  WARN 6717 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 4]]
 ?[1;31m
 Start test 19?[0m
-2021-04-29 16:13:40.058  WARN 6717 --- [nio-8889-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 20?[0m
-2021-04-29 16:13:40.072  WARN 6717 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 4]]
 ?[1;31m
 Start test 21?[0m
-2021-04-29 16:13:40.083  WARN 6717 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 22?[0m
-2021-04-29 16:13:40.127  WARN 6717 --- [nio-8889-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public engine.Quiz engine.QuizController.createQuiz(engine.Quiz): [Field error in object 'quiz' on field 'options': rejected value [null]; codes [NotNull.quiz.options,NotNull.options,NotNull.[Ljava.lang.String;,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [quiz.options,options]; arguments []; default message [options]]; default message [must not be null]] ]
 ?[1;31m
 Start test 23?[0m
-2021-04-29 16:13:40.161  WARN 6717 --- [nio-8889-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 24?[0m
-2021-04-29 16:13:40.173  WARN 6717 --- [io-8889-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 25?[0m
-id: 2
-title: Math1
-answers:[0 1 ]
-
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 26?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 27?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 28?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 29?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 30?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 31?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
 ?[1;31m
 Start test 32?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 33?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 34?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 35?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 36?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 37?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 38?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 39?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_0_, quiz0_.answer as answer2_0_0_, quiz0_.creator as creator3_0_0_, quiz0_.options as options4_0_0_, quiz0_.text as text5_0_0_, quiz0_.title as title6_0_0_ from quizzes quiz0_ where quiz0_.id=?
 ?[1;31m
 Start test 40?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
 ?[1;31m
 Start test 41?[0m
+Hibernate: select user0_.id as id1_2_, user0_.email as email2_2_, user0_.password as password3_2_ from users user0_ where user0_.email=?
+Hibernate: select roles0_.user_id as user_id1_3_0_, roles0_.roles_id as roles_id2_3_0_, role1_.id as id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.roles_id=role1_.id where roles0_.user_id=?
+Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.creator as creator3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quizzes quiz0_
 ?[1;31m
 Start test 42?[0m
-?[1;31m
-Start test 43?[0m
-id: 3
-title: Math2
-answers:[1 3 ]
-
-?[1;31m
-Start test 44?[0m
-?[1;31m
-Start test 45?[0m
-?[1;31m
-Start test 46?[0m
-?[1;31m
-Start test 47?[0m
-?[1;31m
-Start test 48?[0m
-?[1;31m
-Start test 49?[0m
-?[1;31m
-Start test 50?[0m
-?[1;31m
-Start test 51?[0m
-?[1;31m
-Start test 52?[0m
-?[1;31m
-Start test 53?[0m
-?[1;31m
-Start test 54?[0m
-?[1;31m
-Start test 55?[0m
-?[1;31m
-Start test 56?[0m
-?[1;31m
-Start test 57?[0m
-?[1;31m
-Start test 58?[0m
-?[1;31m
-Start test 59?[0m
-?[1;31m
-Start test 60?[0m
-?[1;31m
-Start test 61?[0m
-id: 4
-title: Math3
-answers:[]
-
-?[1;31m
-Start test 62?[0m
-?[1;31m
-Start test 63?[0m
-?[1;31m
-Start test 64?[0m
-?[1;31m
-Start test 65?[0m
-?[1;31m
-Start test 66?[0m
-?[1;31m
-Start test 67?[0m
-?[1;31m
-Start test 68?[0m
-?[1;31m
-Start test 69?[0m
-?[1;31m
-Start test 70?[0m
-?[1;31m
-Start test 71?[0m
-?[1;31m
-Start test 72?[0m
-?[1;31m
-Start test 73?[0m
-?[1;31m
-Start test 74?[0m
-?[1;31m
-Start test 75?[0m
-?[1;31m
-Start test 76?[0m
-?[1;31m
-Start test 77?[0m
-?[1;31m
-Start test 78?[0m
-?[1;31m
-Start test 79?[0m
-id: 5
-title: Math4
-answers:[]
-
-?[1;31m
-Start test 80?[0m
-?[1;31m
-Start test 81?[0m
-?[1;31m
-Start test 82?[0m
-?[1;31m
-Start test 83?[0m
-?[1;31m
-Start test 84?[0m
-?[1;31m
-Start test 85?[0m
-?[1;31m
-Start test 86?[0m
-?[1;31m
-Start test 87?[0m
-?[1;31m
-Start test 88?[0m
-?[1;31m
-Start test 89?[0m
-?[1;31m
-Start test 90?[0m
-?[1;31m
-Start test 91?[0m
-?[1;31m
-Start test 92?[0m
-?[1;31m
-Start test 93?[0m
-?[1;31m
-Start test 94?[0m
-?[1;31m
-Start test 95?[0m
-?[1;31m
-Start test 96?[0m
-?[1;31m
-Start test 97?[0m
-id: 6
-title: Math5
-answers:[0 1 3 ]
-
-?[1;31m
-Start test 98?[0m
-?[1;31m
-Start test 99?[0m
-?[1;31m
-Start test 100?[0m
-?[1;31m
-Start test 101?[0m
-?[1;31m
-Start test 102?[0m
-?[1;31m
-Start test 103?[0m
-?[1;31m
-Start test 104?[0m
-?[1;31m
-Start test 105?[0m
-?[1;31m
-Start test 106?[0m
-?[1;31m
-Start test 107?[0m
-?[1;31m
-Start test 108?[0m
-?[1;31m
-Start test 109?[0m
-?[1;31m
-Start test 110?[0m
-?[1;31m
-Start test 111?[0m
-?[1;31m
-Start test 112?[0m
-?[1;31m
-Start test 113?[0m
-?[1;31m
-Start test 114?[0m
+2021-05-11 12:52:44.696  INFO 591 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+Pause...
+2021-05-11 12:52:45.703  INFO 591 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 12:52:45.708  INFO 591 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 12:52:45.946  INFO 591 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/287312/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Fri, 30 Apr 2021 12:20:57 UTC
+update_date: Tue, 11 May 2021 08:24:23 UTC
 stages:
 - id: 504
   step: 8252
@@ -16,7 +16,7 @@ stages:
   is_completed: true
 - id: 507
   step: 8255
-  is_completed: false
+  is_completed: true
 - id: 508
   step: 8256
   is_completed: false
@@ -29,8 +29,6 @@ topics:
     theory_id: 7929
   - title: Units of information
     theory_id: 6865
-  - title: Introduction to operating systems
-    theory_id: 9704
   - title: IDE
     theory_id: 10996
   - title: Computer algorithms
@@ -55,18 +53,20 @@ topics:
     theory_id: 7834
   - title: Introduction to Spring boot
     theory_id: 7944
+  - title: Postman
+    theory_id: 8512
+  - title: Introduction to operating systems
+    theory_id: 9704
   - title: Getting started with Spring Boot
     theory_id: 6336
   - title: Basic project structure
     theory_id: 6339
   - title: Rest controller
     theory_id: 7015
-  - title: Postman
-    theory_id: 8512
-  - title: Introduction to OOP
-    theory_id: 3614
   - title: External resources
     theory_id: 6216
+  - title: Computer programming
+    theory_id: 8739
   - title: Introduction to Java
     theory_id: 3500
   - title: Basic literals
@@ -85,6 +85,8 @@ topics:
     theory_id: 3513
   - title: Scanning the input
     theory_id: 9055
+  - title: Introduction to OOP
+    theory_id: 3614
   - title: Arithmetic operations
     theory_id: 3519
   - title: Integer types and operations
@@ -133,12 +135,6 @@ topics:
     theory_id: 8504
   - title: Frameworks
     theory_id: 6701
-  - title: Command line overview
-    theory_id: 8977
-  - title: Parameters and options
-    theory_id: 9746
-  - title: Gradle basics
-    theory_id: 5075
   - title: Calling a method
     theory_id: 10973
   - title: Declaring a method
@@ -161,16 +157,22 @@ topics:
     theory_id: 3523
   - title: Final variables
     theory_id: 7427
+  - title: IntelliJ IDEA
+    theory_id: 3801
+  - title: Command line overview
+    theory_id: 8977
+  - title: Parameters and options
+    theory_id: 9746
   - title: Java Archive
     theory_id: 4311
+  - title: Gradle basics
+    theory_id: 5075
   - title: Basic project with Gradle
     theory_id: 5077
   - title: Building apps using Gradle
     theory_id: 7917
   - title: Dependency management
     theory_id: 5076
-  - title: IntelliJ IDEA
-    theory_id: 3801
   - title: Introduction to generic programming
     theory_id: 3492
   - title: What are collections

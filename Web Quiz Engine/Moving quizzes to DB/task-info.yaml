@@ -594,45 +594,6 @@ files:
         }
     }
   learner_created: true
-- name: src/engine/QuizModel.java
-  visible: true
-  text: |
-    package engine;
-
-    import java.util.ArrayList;
-    import java.util.List;
-
-    public class QuizModel {
-        private List<Quiz> quizzes = new ArrayList<>();
-        private int id = 0;
-
-        public Quiz getQuiz(int id) {
-            if (id >= quizzes.size()) {
-                return null;
-            }
-
-            return quizzes.get(id);
-        }
-
-        public void storeQuiz(Quiz quiz) {
-            quizzes.add(quiz);
-            id++;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public List<Quiz> getAllQuizzes() {
-            return quizzes;
-        }
-
-        public void clear() {
-            quizzes.clear();
-            id = 0;
-        }
-    }
-  learner_created: true
 - name: src/engine/QuizAnswers.java
   visible: true
   text: |
@@ -746,5 +707,8 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/507/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 30 Apr 2021 15:10:46 UTC
+record: 4

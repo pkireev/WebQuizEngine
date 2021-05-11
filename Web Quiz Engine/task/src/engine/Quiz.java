@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 @Entity
 @Table(name = "quizzes")
-@JsonIgnoreProperties(value={ "answer" }, allowSetters = true)
+@JsonIgnoreProperties(value={ "answer", "creator" }, allowSetters = true)
 public class Quiz {
 
     private int id;
@@ -26,6 +26,7 @@ public class Quiz {
     private String[] options;
 
     private Integer[] answer;
+    private String creator;
 
     public Quiz(){}
 
@@ -88,5 +89,13 @@ public class Quiz {
         } else {
             Arrays.sort(answer);
         }
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 }

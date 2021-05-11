@@ -8,14 +8,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.*;
 
 @Service
 public class UserService implements UserDetailsService {
-    @PersistenceContext
-    private EntityManager em;
 
     @Autowired
     UserRepository userRepository;
@@ -29,7 +25,6 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(username);
-        System.out.println(user);
 
         if (user == null) {
             throw new UsernameNotFoundException("User not found");
@@ -46,7 +41,6 @@ public class UserService implements UserDetailsService {
                 true,
                 authorities);
 
-        System.out.println(newUser);
         return newUser;
     }
 
@@ -81,9 +75,6 @@ public class UserService implements UserDetailsService {
         user.setRoles(Collections.singleton(role));
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
-        System.out.println(user);
-        System.out.println(role);
-
         roleRepository.save(role);
         userRepository.save(user);
         return true;
@@ -96,12 +87,6 @@ public class UserService implements UserDetailsService {
         }
         return false;
     }
-
-    public List<User> usergtList(int idMin) {
-        return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)
-                .setParameter("paramId", idMin).getResultList();
-    }
-
 
     private static List<GrantedAuthority> getAuthorities (Set<Role> roles) {
         List<GrantedAuthority> authorities = new ArrayList<>();
