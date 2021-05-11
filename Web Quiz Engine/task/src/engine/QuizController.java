@@ -1,13 +1,17 @@
 package engine;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import javax.validation.Valid;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -17,10 +21,18 @@ public class QuizController {
     public QuizRepository quizRepository;
 
     @Autowired
+    public QuizService quizService;
+
+    @Autowired
     public UserRepository userRepository;
 
     @Autowired
     public UserService userService;
+
+    @Autowired
+    public SolvedQuizRepository solvedQuizRepository;
+
+    private final static int PAGE_SIZE = 10;
 
     public QuizController(){}
 
@@ -38,6 +50,10 @@ public class QuizController {
         }
 
         if (isCorrect) {
+            SolvedQuiz solvedQuiz = new SolvedQuiz(id, getCurrentUser(), new Date());
+            solvedQuiz.setRecordId(solvedQuiz.getRecordId() + 1);
+
+            solvedQuizRepository.save(solvedQuiz);
             return new Result(true, "Congratulations, you're right!");
         } else {
             return new Result(false, "Wrong answer! Please, try again.");
@@ -46,18 +62,18 @@ public class QuizController {
 
     @PostMapping(path = "/api/quizzes")
     public Quiz createQuiz(@Valid @RequestBody Quiz newQuiz) {
-
         newQuiz.fixAnswers();
         newQuiz.setCreator(getCurrentUser());
-
         quizRepository.save(newQuiz);
 
         return newQuiz;
     }
 
     @GetMapping(path = "/api/quizzes")
-    public List<Quiz> getAllQuizzes() {
-        return (List<Quiz>) quizRepository.findAll();
+    public ResponseEntity<Page<Quiz>> getAllQuizzes(@RequestParam(defaultValue = "0") Integer page) {
+
+        Page<Quiz> pagedResult = quizService.getAllQuizzes(page, PAGE_SIZE);
+        return new ResponseEntity<>(pagedResult, new HttpHeaders(), HttpStatus.OK);
     }
 
     @GetMapping(path = "/api/quizzes/{id}")
@@ -108,5 +124,11 @@ public class QuizController {
     private String getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return authentication.getName();
+    }
+
+    @GetMapping("/api/quizzes/completed")
+    public ResponseEntity<Page<SolvedQuiz>> getSolvedQuizzes(@RequestParam(defaultValue = "0") Integer page) {
+        Page<SolvedQuiz> pagedResult = quizService.getSolvedQuizzes(page, PAGE_SIZE, getCurrentUser());
+        return new ResponseEntity<>(pagedResult, new HttpHeaders(), HttpStatus.OK);
     }
 }

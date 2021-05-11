@@ -31,6 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/register").permitAll()
                 .antMatchers("/api/users").permitAll()
                 .antMatchers("/api/quizzes").hasRole("USER")
+                .antMatchers("/api/quizzes/completed").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();

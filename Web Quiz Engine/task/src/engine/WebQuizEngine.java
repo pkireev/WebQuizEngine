@@ -17,6 +17,11 @@ import javax.annotation.PreDestroy;
  *
  * also good in English:
  * https://www.marcobehler.com/guides/spring-security
+ *
+ *
+ * About pagination and sorting:
+ * https://howtodoinjava.com/spring-boot2/pagination-sorting-example/
+ *
  */
 
 
@@ -24,24 +29,6 @@ import javax.annotation.PreDestroy;
 public class WebQuizEngine {
 
     public static void main(String[] args) {
-        pause();
         SpringApplication.run(WebQuizEngine.class, args);
-    }
-
-    private static void pause() {
-        // System.out.println("Pause...");
-
-        try {
-            Thread.sleep(100);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        };
-    }
-
-    @PreDestroy
-    public void destroy() {
-        // System.out.println("Shutting down...");
-        pause(); // just for passing tests...
     }
 }
