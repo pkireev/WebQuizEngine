@@ -142,22 +142,13 @@ public class QuizController {
         return new ResponseEntity<>(pagedResult, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @GetMapping("/birthdays")
-    public @ResponseBody
-    Object getBirthdays(HttpServletResponse response) {
+
+    @GetMapping(value = "/birthdays", produces = "text/json")
+    public @ResponseBody byte[] getBirthdays(HttpServletResponse response) throws IOException {
         response.addHeader("Access-Control-Allow-Origin", "*");
-
-        Resource resource = new ClassPathResource("birthdays.json");
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            InputStream stream = resource.getInputStream();
-
-            return mapper.readValue(stream, Object.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "Nope";
+        return getFile("birthdays.json");
     }
+
 
     @GetMapping(value = "/app.js", produces = "application/javascript")
     public @ResponseBody byte[] appjs(HttpServletResponse response) throws IOException {

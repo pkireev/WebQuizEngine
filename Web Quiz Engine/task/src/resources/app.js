@@ -1,6 +1,4 @@
-
 var xmlHttp = new XMLHttpRequest();
-
 
 xmlHttp.open( "GET", "/birthdays", false); // false for synchronous request
 xmlHttp.send( null );
@@ -59,7 +57,6 @@ for (var i = 1; i < 8; i++) {
 }
 
 
-
 // function must take a day (today, tomorrow, period by days) and return array with birthdays
 function getArrayForDate(currentDate) {
     var result = []
@@ -80,8 +77,6 @@ function getArrayForDate(currentDate) {
 }
 
 
-
-    
 var app = new Vue({
     el: '#app',
     data: {
@@ -94,4 +89,3 @@ var app = new Vue({
         months: monthOutput
     }
 });
-
