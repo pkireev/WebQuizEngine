@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/287312/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 11 May 2021 19:30:58 UTC
+update_date: Thu, 20 May 2021 11:40:54 UTC
 stages:
 - id: 504
   step: 8252
@@ -22,7 +22,7 @@ stages:
   is_completed: true
 - id: 509
   step: 8257
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: JVM, JRE, and JDK
@@ -63,8 +63,10 @@ topics:
     theory_id: 6336
   - title: Basic project structure
     theory_id: 6339
-  - title: Rest controller
-    theory_id: 7015
+  - title: Getting data from REST
+    theory_id: 13287
+  - title: Posting and deleting data via REST
+    theory_id: 13292
   - title: External resources
     theory_id: 6216
   - title: Computer programming
@@ -175,10 +177,16 @@ topics:
     theory_id: 5076
   - title: Introduction to generic programming
     theory_id: 3492
+  - title: Generics and Object
+    theory_id: 3493
   - title: What are collections
     theory_id: 3770
+  - title: The Collections Framework overview
+    theory_id: 3624
   - title: ArrayList
     theory_id: 3567
+  - title: The List interface
+    theory_id: 3581
   - title: Defining classes
     theory_id: 3618
   - title: Constructor
@@ -197,6 +205,12 @@ topics:
     theory_id: 3583
   - title: The keyword super
     theory_id: 3588
+  - title: Protected modifier
+    theory_id: 6692
+  - title: Referencing subclass objects
+    theory_id: 3585
+  - title: The Object class
+    theory_id: 3596
   - title: Annotations basics
     theory_id: 3622
   - title: Objects
@@ -207,6 +221,10 @@ topics:
     theory_id: 3534
   - title: Hiding and overriding
     theory_id: 3572
+  - title: Polymorphism
+    theory_id: 3587
+  - title: Interface
+    theory_id: 3615
   1:
   - title: 'Hashing: overview'
     theory_id: 9831
@@ -214,34 +232,18 @@ topics:
     theory_id: 10878
   - title: Hash table
     theory_id: 13054
-  - title: Passing JSON to server
-    theory_id: 7165
   - title: Beans and components
     theory_id: 7353
+  - title: Passing JSON to server
+    theory_id: 7165
   - title: Hierarchy of exceptions
     theory_id: 3570
   - title: Exception handling
     theory_id: 3552
-  - title: Generics and Object
-    theory_id: 3493
-  - title: The Collections Framework overview
-    theory_id: 3624
-  - title: The List interface
-    theory_id: 3581
   - title: The Set interface
     theory_id: 3575
   - title: The Map interface
     theory_id: 3558
-  - title: Protected modifier
-    theory_id: 6692
-  - title: Referencing subclass objects
-    theory_id: 3585
-  - title: The Object class
-    theory_id: 3596
-  - title: Polymorphism
-    theory_id: 3587
-  - title: Interface
-    theory_id: 3615
   2:
   - title: Exception handling
     theory_id: 8780

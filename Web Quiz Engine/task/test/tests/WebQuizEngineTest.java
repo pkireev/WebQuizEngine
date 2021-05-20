@@ -266,7 +266,7 @@ public class WebQuizEngineTest extends SpringTest {
         // Test database save
         () -> testAllQuizzes(2, 0, 1),
         () -> testAllQuizzes(2, 0,2),
-//        () -> reloadServer(),
+        () -> reloadServer(),
         () -> testAllQuizzes(2, 0,1),
         () -> testAllQuizzes(2, 0,2),
         () -> checkQuizSuccess(quizIds[0], "[2]", true, 2),
@@ -390,7 +390,7 @@ public class WebQuizEngineTest extends SpringTest {
         () -> checkQuizSuccess(quizIds[6], "[0,1,2,3]", false, 2),
 
         () -> testAllQuizzes(7, 0,2),
-//        () -> reloadServer(),
+        () -> reloadServer(),
         () -> testAllQuizzes(7, 0,2),
         () -> checkQuizSuccess(quizIds[5], "[]", true, 1),
         () -> checkQuizSuccess(quizIds[5], "[0]", false, 2),
@@ -465,7 +465,7 @@ public class WebQuizEngineTest extends SpringTest {
         () -> testQuizNotExists(1, 2, 0),
 
         () -> testAllQuizzes(5, 0,1),
-//        () -> reloadServer(),
+        () -> reloadServer(),
         () -> testAllQuizzes(5, 0,2),
         () -> testQuizNotExists(0, 1, 0),
         () -> testQuizNotExists(0, 2, 0),

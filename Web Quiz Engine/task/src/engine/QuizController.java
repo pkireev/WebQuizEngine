@@ -1,15 +1,25 @@
 package engine;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -131,4 +141,50 @@ public class QuizController {
         Page<SolvedQuiz> pagedResult = quizService.getSolvedQuizzes(page, PAGE_SIZE, getCurrentUser());
         return new ResponseEntity<>(pagedResult, new HttpHeaders(), HttpStatus.OK);
     }
+
+    @GetMapping("/birthdays")
+    public @ResponseBody
+    Object getBirthdays(HttpServletResponse response) {
+        response.addHeader("Access-Control-Allow-Origin", "*");
+
+        Resource resource = new ClassPathResource("birthdays.json");
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            InputStream stream = resource.getInputStream();
+
+            return mapper.readValue(stream, Object.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "Nope";
+    }
+
+    @GetMapping(value = "/app.js", produces = "application/javascript")
+    public @ResponseBody byte[] appjs(HttpServletResponse response) throws IOException {
+        response.addHeader("Access-Control-Allow-Origin", "*");
+        return getFile("app.js");
+    }
+
+
+    @GetMapping(value = "/", produces = "text/html")
+    @ResponseBody
+    public byte[] welcome() throws IOException {
+        return getFile("birthdays.html");
+    }
+
+    private byte[] getFile(String name) throws IOException {
+        Resource resource = new ClassPathResource(name);
+        InputStream in = resource.getInputStream();
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+
+        int nRead;
+        byte[] data = new byte[16384];
+
+        while ((nRead = in.read(data, 0, data.length)) != -1) {
+            buffer.write(data, 0, nRead);
+        }
+
+        return buffer.toByteArray();
+    }
+
 }

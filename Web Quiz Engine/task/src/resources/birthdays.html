@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en;ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Birthdays</title>
+</head>
+
+<body>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+		html {
+			font-family: 'Roboto', sans-serif;
+			color: #3f3f3f;
+		}
+
+		.past {
+			color: darkgray;
+		}
+
+		ul {
+			list-style-type: none
+		}
+
+		.today, .tomorrow {
+			color: #ff0000
+		}
+
+	</style>
+
+	<div id="app">
+		
+		<div class="past">
+			<h2>Прошедшие</h2>
+				<ul>
+					<li v-for = "bd in pasts">
+						{{ bd.text }}
+					</li>
+				</ul>
+		</div>
+
+		<br>
+		<div class="today">
+			<h2>Сегодня {{ today }}</h2>
+			<ul>
+				<li v-for = "bd in todays">
+					{{ bd.text }}
+				</li>
+			</ul>
+		</div>
+
+		<br>
+
+		<div class="tomorrow">
+			<h2>Завтра {{ tomorrow }}</h2>
+			<ul>
+				<li v-for = "bd in tomorrows">
+					{{ bd.text }}
+				</li>
+			</ul>
+		</div>
+
+		<br>
+
+		<div class="week">
+			<h2>В течение недели</h2>
+			<ul>
+				<li v-for = "bd in weeks">
+					{{ bd.text }}
+				</li>
+			</ul>
+		</div>
+
+		<br>
+
+		<div class="month">
+			<h2>В течение месяца</h2>
+			<ul>
+				<li v-for = "bd in months">
+					{{ bd.text}}
+				</li>
+			</ul>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="/app.js"></script>
+
+	</div>
+</body>
+</html>

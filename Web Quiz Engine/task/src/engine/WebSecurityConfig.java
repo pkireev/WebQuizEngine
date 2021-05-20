@@ -30,6 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/actuator/shutdown").permitAll()
                 .antMatchers("/api/register").permitAll()
                 .antMatchers("/api/users").permitAll()
+                .antMatchers("/birthdays", "/", "/app.js").permitAll()
                 .antMatchers("/api/quizzes").hasRole("USER")
                 .antMatchers("/api/quizzes/completed").hasRole("USER")
                 .anyRequest().authenticated()
