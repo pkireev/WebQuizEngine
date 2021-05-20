@@ -12,7 +12,7 @@ Technologies and methods used:
 - Repositories
 - receives GET and POST requests
 - returns various responses: objects, files, strings with http status codes
-- Basic authorization
+- Basic authorization with roles
 - works with JSON
 - receives fields in POST's body and GET's parameters and blocks several fields in responses
 - validates received data
