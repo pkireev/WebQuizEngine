@@ -7,10 +7,6 @@ xmlHttp.send( null );
 
 var birthdays = JSON.parse(xmlHttp.responseText);
 
-
-console.log(birthdays);
-
-
 const today = new Date();
 const tomorrow = new Date(today);
 tomorrow.setDate(tomorrow.getDate() + 1);
